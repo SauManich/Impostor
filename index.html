@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Impostor Bíblico - Bienvenido</title>
+  <meta name="description" content="Un juego bíblico para descubrir al impostor entre tus amigos." />
+
+  <!-- PWA -->
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#1A1B20" />
+  <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16.png" />
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Impostor Bíblico" />
+
+  <link rel="stylesheet" href="css/index.css" />
+</head>
+<body>
+  <div class="welcome-shell">
+    <main class="welcome-content">
+      <section class="welcome-text">
+        <h1>Bienvenido al <span class="accent">Impostor Bíblico</span></h1>
+        <p>
+          Un juego bíblico para descubrir al impostor entre tus amigos.
+          Recibe tu personaje, comparte pistas y desenmascara a quien
+          no pertenece a la historia.
+        </p>
+      </section>
+
+      <section class="welcome-art" aria-label="Ilustración del juego">
+        <span class="blob blob-a" aria-hidden="true"></span>
+        <span class="blob blob-b" aria-hidden="true"></span>
+        <img src="img/LogoImpostor.png" alt="Logo Impostor Bíblico" class="welcome-logo" />
+      </section>
+
+      <section class="welcome-actions">
+        <button type="button" class="play-circle" aria-label="Reproducir">
+          <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+            <path d="M8 5.5v13l11-6.5z"></path>
+          </svg>
+        </button>
+
+        <button type="button" class="cta-pill" id="startBtn">Comenzar Juego</button>
+      </section>
+    </main>
+  </div>
+
+  <script src="js/index.js"></script>
+</body>
+</html>

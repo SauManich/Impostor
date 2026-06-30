@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+	<title>Impostor Bíblico - Inicio</title>
+
+	<!-- PWA -->
+	<link rel="manifest" href="../manifest.json" />
+	<meta name="theme-color" content="#1A1B20" />
+	<link rel="icon" type="image/png" sizes="32x32" href="../icons/favicon-32.png" />
+	<link rel="icon" type="image/png" sizes="16x16" href="../icons/favicon-16.png" />
+	<link rel="apple-touch-icon" href="../icons/apple-touch-icon.png" />
+	<meta name="mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+	<meta name="apple-mobile-web-app-title" content="Impostor Bíblico" />
+
+	<link rel="stylesheet" href="../css/game.css" />
+</head>
+<body>
+	<div class="app-shell">
+		<header class="top-bar">
+			<button class="icon-btn" type="button" aria-label="Ajustes">
+				<svg viewBox="0 0 24 24" focusable="false" class="stroke-icon">
+					<circle cx="12" cy="12" r="3.2"></circle>
+					<path d="M19.4 13.5a7.6 7.6 0 0 0 .06-1.5 7.6 7.6 0 0 0-.06-1.5l1.7-1.3a.4.4 0 0 0 .1-.5l-1.6-2.8a.4.4 0 0 0-.5-.18l-2 .8a7.4 7.4 0 0 0-2.6-1.5l-.3-2.1a.4.4 0 0 0-.4-.33h-3.2a.4.4 0 0 0-.4.33l-.3 2.1a7.4 7.4 0 0 0-2.6 1.5l-2-.8a.4.4 0 0 0-.5.18l-1.6 2.8a.4.4 0 0 0 .1.5l1.7 1.3a7.6 7.6 0 0 0 0 3l-1.7 1.3a.4.4 0 0 0-.1.5l1.6 2.8a.4.4 0 0 0 .5.18l2-.8a7.4 7.4 0 0 0 2.6 1.5l.3 2.1a.4.4 0 0 0 .4.33h3.2a.4.4 0 0 0 .4-.33l.3-2.1a7.4 7.4 0 0 0 2.6-1.5l2 .8a.4.4 0 0 0 .5-.18l1.6-2.8a.4.4 0 0 0-.1-.5z"></path>
+				</svg>
+			</button>
+
+			<div class="top-right-actions">
+				<button class="icon-btn" type="button" aria-label="Notificaciones">
+					<svg viewBox="0 0 24 24" focusable="false" class="stroke-icon">
+						<path d="M12 4.3a4.5 4.5 0 0 0-4.5 4.5v2.1c0 .9-.3 1.7-.9 2.4l-1.2 1.4h13.2l-1.2-1.4a3.6 3.6 0 0 1-.9-2.4V8.8A4.5 4.5 0 0 0 12 4.3z"></path>
+						<path d="M10 16.8a2.2 2.2 0 0 0 4 0"></path>
+					</svg>
+					<span class="badge">1</span>
+				</button>
+
+				<button class="icon-btn" type="button" aria-label="Ayuda">
+					<svg viewBox="0 0 24 24" focusable="false" class="stroke-icon">
+						<circle cx="12" cy="12" r="8"></circle>
+						<path d="M9.6 9.5a2.5 2.5 0 0 1 4.8.8c0 1.7-2.4 2.3-2.4 3.7"></path>
+						<circle cx="12" cy="16.9" r=".7" class="fill-dot"></circle>
+					</svg>
+				</button>
+			</div>
+		</header>
+
+		<main class="home-content">
+			<section class="brand-zone" aria-label="Marca">
+				<img src="../img/LogoImpostor.png" alt="Logo Impostor" class="brand-logo" />
+				<h1>Impostor</h1>
+			</section>
+
+			<section class="promo-card" aria-label="Oferta exclusiva">
+				<div class="gift-emoji" aria-hidden="true">🎁</div>
+				<div class="promo-copy">
+					<h2>Oferta Exclusiva</h2>
+					<p>Obtén todos los paquetes, crea palabras, y elimina los anuncios.</p>
+				</div>
+				<span class="timer-pill">00:14:30</span>
+			</section>
+
+			<h2 class="section-title">¿Cómo quieres jugar?</h2>
+
+			<section class="mode-grid" aria-label="Modos de juego">
+				<article class="mode-card mode-card-offline" data-href="config-game.html">
+					<div class="mode-icon" aria-hidden="true">
+						<svg viewBox="0 0 120 120" focusable="false" class="planet">
+							<defs>
+								<radialGradient id="oceanOff" cx="36%" cy="30%" r="80%">
+									<stop offset="0" stop-color="#aab2c1"></stop>
+									<stop offset="45%" stop-color="#6c7585"></stop>
+									<stop offset="100%" stop-color="#3a414e"></stop>
+								</radialGradient>
+								<radialGradient id="atmoOff" cx="50%" cy="50%" r="50%">
+									<stop offset="60%" stop-color="rgba(200,210,225,0)"></stop>
+									<stop offset="85%" stop-color="rgba(200,210,225,0.32)"></stop>
+									<stop offset="100%" stop-color="rgba(200,210,225,0)"></stop>
+								</radialGradient>
+								<clipPath id="clipOff"><circle cx="60" cy="60" r="30"></circle></clipPath>
+							</defs>
+							<circle class="atmo" cx="60" cy="60" r="40" fill="url(#atmoOff)"></circle>
+							<circle cx="60" cy="60" r="30" fill="url(#oceanOff)"></circle>
+							<g clip-path="url(#clipOff)">
+								<g class="continents" fill="#4d5666">
+									<g>
+										<ellipse cx="48" cy="52" rx="9" ry="13" transform="rotate(-18 48 52)"></ellipse>
+										<ellipse cx="63" cy="49" rx="7" ry="9" transform="rotate(22 63 49)"></ellipse>
+										<ellipse cx="66" cy="67" rx="6" ry="8" transform="rotate(-12 66 67)"></ellipse>
+										<ellipse cx="40" cy="66" rx="5" ry="7" transform="rotate(28 40 66)"></ellipse>
+									</g>
+									<g transform="translate(60 0)">
+										<ellipse cx="48" cy="52" rx="9" ry="13" transform="rotate(-18 48 52)"></ellipse>
+										<ellipse cx="63" cy="49" rx="7" ry="9" transform="rotate(22 63 49)"></ellipse>
+										<ellipse cx="66" cy="67" rx="6" ry="8" transform="rotate(-12 66 67)"></ellipse>
+										<ellipse cx="40" cy="66" rx="5" ry="7" transform="rotate(28 40 66)"></ellipse>
+									</g>
+								</g>
+							</g>
+							<ellipse class="shine" cx="49" cy="47" rx="10" ry="7" fill="#ffffff" opacity="0.14"></ellipse>
+							<circle cx="60" cy="60" r="30" fill="none" stroke="rgba(255,255,255,0.16)" stroke-width="1.4"></circle>
+						</svg>
+					</div>
+					<h3>Offline</h3>
+					<p>Todos juegan en el mismo dispositivo</p><br>
+					<button type="button" class="play-btn">Jugar</button>
+				</article>
+
+				<article class="mode-card mode-card-online">
+					<div class="mode-icon" aria-hidden="true">
+						<svg viewBox="0 0 120 120" focusable="false" class="planet">
+							<defs>
+								<radialGradient id="oceanOn" cx="36%" cy="30%" r="80%">
+									<stop offset="0" stop-color="#6cc4ff"></stop>
+									<stop offset="42%" stop-color="#2f8fe6"></stop>
+									<stop offset="100%" stop-color="#0a4f96"></stop>
+								</radialGradient>
+								<radialGradient id="atmoOn" cx="50%" cy="50%" r="50%">
+									<stop offset="60%" stop-color="rgba(140,255,205,0)"></stop>
+									<stop offset="84%" stop-color="rgba(140,255,205,0.5)"></stop>
+									<stop offset="100%" stop-color="rgba(140,255,205,0)"></stop>
+								</radialGradient>
+								<clipPath id="clipOn"><circle cx="60" cy="60" r="30"></circle></clipPath>
+							</defs>
+							<circle class="atmo" cx="60" cy="60" r="40" fill="url(#atmoOn)"></circle>
+							<circle cx="60" cy="60" r="30" fill="url(#oceanOn)"></circle>
+							<g clip-path="url(#clipOn)">
+								<g class="continents" fill="#37c45f">
+									<g>
+										<ellipse cx="48" cy="52" rx="9" ry="13" transform="rotate(-18 48 52)"></ellipse>
+										<ellipse cx="63" cy="49" rx="7" ry="9" transform="rotate(22 63 49)"></ellipse>
+										<ellipse cx="66" cy="67" rx="6" ry="8" transform="rotate(-12 66 67)"></ellipse>
+										<ellipse cx="40" cy="66" rx="5" ry="7" transform="rotate(28 40 66)"></ellipse>
+									</g>
+									<g transform="translate(60 0)">
+										<ellipse cx="48" cy="52" rx="9" ry="13" transform="rotate(-18 48 52)"></ellipse>
+										<ellipse cx="63" cy="49" rx="7" ry="9" transform="rotate(22 63 49)"></ellipse>
+										<ellipse cx="66" cy="67" rx="6" ry="8" transform="rotate(-12 66 67)"></ellipse>
+										<ellipse cx="40" cy="66" rx="5" ry="7" transform="rotate(28 40 66)"></ellipse>
+									</g>
+								</g>
+							</g>
+							<ellipse class="shine" cx="49" cy="47" rx="10" ry="7" fill="#ffffff" opacity="0.22"></ellipse>
+							<circle cx="60" cy="60" r="30" fill="none" stroke="rgba(255,255,255,0.22)" stroke-width="1.4"></circle>
+						</svg>
+					</div>
+					<h3>Online</h3>
+					<p>Juega con amigos o con el mundo</p>
+					<button type="button" class="play-btn">Jugar</button>
+				</article>
+			</section>
+
+			<!-- <section class="menu-list" aria-label="Opciones adicionales">
+				<article class="menu-item">
+					<div class="menu-icon" aria-hidden="true">🃏</div>
+					<div class="menu-copy">
+						<h3>Paquetes</h3>
+						<p>Toda la colección y los tuyos</p>
+					</div>
+					<span class="chevron" aria-hidden="true">›</span>
+				</article>
+
+				<article class="menu-item">
+					<div class="menu-icon" aria-hidden="true">🎲</div>
+					<div class="menu-copy">
+						<h3>Más Juegos</h3>
+						<p>Directo de nuestro estudio para ti ♡</p>
+					</div>
+					<span class="chevron" aria-hidden="true">›</span>
+				</article>
+			</section> -->
+		</main>
+	</div>
+
+	<script src="../js/game.js"></script>
+</body>
+</html>

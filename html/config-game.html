@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Impostor Bíblico - Configuración</title>
+
+  <!-- PWA -->
+  <link rel="manifest" href="../manifest.json" />
+  <meta name="theme-color" content="#1A1B20" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../icons/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="../icons/favicon-16.png" />
+  <link rel="apple-touch-icon" href="../icons/apple-touch-icon.png" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Impostor Bíblico" />
+
+  <link rel="stylesheet" href="../css/config-game.css" />
+</head>
+<body>
+  <div class="config-shell">
+    <header class="config-top">
+      <button class="icon-btn" type="button" aria-label="Inicio" data-href="game.html">
+        <svg viewBox="0 0 24 24" focusable="false" class="stroke-icon">
+          <path d="M4 11.2 12 4l8 7.2"></path>
+          <path d="M6 10v9h12v-9"></path>
+          <path d="M10 19v-5h4v5"></path>
+        </svg>
+      </button>
+
+      <button class="icon-btn" type="button" aria-label="Ayuda">
+        <svg viewBox="0 0 24 24" focusable="false" class="stroke-icon">
+          <circle cx="12" cy="12" r="8"></circle>
+          <path d="M9.6 9.5a2.5 2.5 0 0 1 4.8.8c0 1.7-2.4 2.3-2.4 3.7"></path>
+          <circle cx="12" cy="16.9" r=".7" class="fill-dot"></circle>
+        </svg>
+      </button>
+    </header>
+
+    <main class="config-content">
+      <!-- Cabecera Offline -->
+      <section class="offline-head" aria-label="Modo Offline">
+        <span class="offline-icon" aria-hidden="true">
+          <svg viewBox="0 0 120 120" focusable="false" class="planet">
+            <defs>
+                <radialGradient id="oceanOff" cx="36%" cy="30%" r="80%">
+                    <stop offset="0" stop-color="#aab2c1"></stop>
+                    <stop offset="45%" stop-color="#6c7585"></stop>
+                    <stop offset="100%" stop-color="#3a414e"></stop>
+                </radialGradient>
+                <radialGradient id="atmoOff" cx="50%" cy="50%" r="50%">
+                    <stop offset="60%" stop-color="rgba(200,210,225,0)"></stop>
+                    <stop offset="85%" stop-color="rgba(200,210,225,0.32)"></stop>
+                    <stop offset="100%" stop-color="rgba(200,210,225,0)"></stop>
+                </radialGradient>
+                <clipPath id="clipOff"><circle cx="60" cy="60" r="30"></circle></clipPath>
+            </defs>
+            <circle class="atmo" cx="60" cy="60" r="40" fill="url(#atmoOff)"></circle>
+            <circle cx="60" cy="60" r="30" fill="url(#oceanOff)"></circle>
+            <g clip-path="url(#clipOff)">
+                <g class="continents" fill="#4d5666">
+                    <g>
+                        <ellipse cx="48" cy="52" rx="9" ry="13" transform="rotate(-18 48 52)"></ellipse>
+                        <ellipse cx="63" cy="49" rx="7" ry="9" transform="rotate(22 63 49)"></ellipse>
+                        <ellipse cx="66" cy="67" rx="6" ry="8" transform="rotate(-12 66 67)"></ellipse>
+                        <ellipse cx="40" cy="66" rx="5" ry="7" transform="rotate(28 40 66)"></ellipse>
+                    </g>
+                    <g transform="translate(60 0)">
+                        <ellipse cx="48" cy="52" rx="9" ry="13" transform="rotate(-18 48 52)"></ellipse>
+                        <ellipse cx="63" cy="49" rx="7" ry="9" transform="rotate(22 63 49)"></ellipse>
+                        <ellipse cx="66" cy="67" rx="6" ry="8" transform="rotate(-12 66 67)"></ellipse>
+                        <ellipse cx="40" cy="66" rx="5" ry="7" transform="rotate(28 40 66)"></ellipse>
+                    </g>
+                </g>
+            </g>
+            <ellipse class="shine" cx="49" cy="47" rx="10" ry="7" fill="#ffffff" opacity="0.14"></ellipse>
+            <circle cx="60" cy="60" r="30" fill="none" stroke="rgba(255,255,255,0.16)" stroke-width="1.4"></circle>
+        </svg>
+        </span>
+        <h1>Offline</h1>
+      </section>
+
+      <!-- Modos de juego -->
+      <section class="modes-section" aria-label="Modos de juego">
+        <h2 class="section-title">Modos de Juego</h2>
+
+        <div class="mode-scroller">
+          <button type="button" class="theme-card is-selected" data-mode="general">
+            <span class="check-badge" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M5 12.5l4.2 4.3L19 7" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            </span>
+            <span class="theme-icon" aria-hidden="true">
+              <svg viewBox="0 0 64 64">
+                <defs>
+                  <linearGradient id="pageGrad" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#ffffff"></stop>
+                    <stop offset="1" stop-color="#d7e0f3"></stop>
+                  </linearGradient>
+                </defs>
+                <path d="M32 20C24 14 14 13 7 15v33c7-2 17-1 25 4 8-5 18-6 25-4V15c-7-2-17-1-25 5z" fill="#2f59c0"></path>
+                <path d="M32 22C25.5 17.5 17 16.5 11 18v27c6-1.5 14.5-.5 21 3.6V22z" fill="url(#pageGrad)"></path>
+                <path d="M32 22c6-4.5 14.5-5.5 21-4v27c-6.5-1.5-15-2.4-21 1.6V22z" fill="url(#pageGrad)"></path>
+                <rect x="31" y="21" width="2" height="27" rx="1" fill="#9fb3da"></rect>
+                <path d="M15.5 25c4-1 8.5-.6 12.5 1.3M15.5 30c4-1 8.5-.6 12.5 1.3M15.5 35c3-.7 6.5-.6 9.5.5" stroke="#9aa9cf" stroke-width="1.5" stroke-linecap="round" fill="none"></path>
+                <path d="M36 26.3c4-1.9 8.5-2.3 12.5-1.3M36 31.3c4-1.9 8.5-2.3 12.5-1.3M39 36.5c3-1.1 6.5-1.2 9.5-.5" stroke="#9aa9cf" stroke-width="1.5" stroke-linecap="round" fill="none"></path>
+                <path d="M32 5.5v8M28.5 8.7h7" stroke="#ffce4a" stroke-width="2.6" stroke-linecap="round"></path>
+              </svg>
+            </span>
+            <span class="theme-name">General</span>
+          </button>
+
+          <button type="button" class="theme-card" data-mode="milagros">
+            <span class="check-badge" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M5 12.5l4.2 4.3L19 7" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            </span>
+            <span class="theme-icon" aria-hidden="true">
+              <svg viewBox="0 0 64 64">
+                <path d="M32 20C24 14 14 13 7 15v33c7-2 17-1 25 4 8-5 18-6 25-4V15c-7-2-17-1-25 5z" fill="#2f59c0"></path>
+                <path d="M32 22C25.5 17.5 17 16.5 11 18v27c6-1.5 14.5-.5 21 3.6V22z" fill="url(#pageGrad)"></path>
+                <path d="M32 22c6-4.5 14.5-5.5 21-4v27c-6.5-1.5-15-2.4-21 1.6V22z" fill="url(#pageGrad)"></path>
+                <rect x="31" y="21" width="2" height="27" rx="1" fill="#9fb3da"></rect>
+                <path d="M15.5 25c4-1 8.5-.6 12.5 1.3M15.5 30c4-1 8.5-.6 12.5 1.3M15.5 35c3-.7 6.5-.6 9.5.5" stroke="#9aa9cf" stroke-width="1.5" stroke-linecap="round" fill="none"></path>
+                <path d="M36 26.3c4-1.9 8.5-2.3 12.5-1.3M36 31.3c4-1.9 8.5-2.3 12.5-1.3M39 36.5c3-1.1 6.5-1.2 9.5-.5" stroke="#9aa9cf" stroke-width="1.5" stroke-linecap="round" fill="none"></path>
+                <path d="M32 5.5v8M28.5 8.7h7" stroke="#ffce4a" stroke-width="2.6" stroke-linecap="round"></path>
+              </svg>
+            </span>
+            <span class="theme-name">Milagros</span>
+          </button>
+
+          <button type="button" class="theme-card" data-mode="personajes">
+            <span class="check-badge" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M5 12.5l4.2 4.3L19 7" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            </span>
+            <span class="theme-icon" aria-hidden="true">
+              <svg viewBox="0 0 64 64">
+                <path d="M32 20C24 14 14 13 7 15v33c7-2 17-1 25 4 8-5 18-6 25-4V15c-7-2-17-1-25 5z" fill="#2f59c0"></path>
+                <path d="M32 22C25.5 17.5 17 16.5 11 18v27c6-1.5 14.5-.5 21 3.6V22z" fill="url(#pageGrad)"></path>
+                <path d="M32 22c6-4.5 14.5-5.5 21-4v27c-6.5-1.5-15-2.4-21 1.6V22z" fill="url(#pageGrad)"></path>
+                <rect x="31" y="21" width="2" height="27" rx="1" fill="#9fb3da"></rect>
+                <path d="M15.5 25c4-1 8.5-.6 12.5 1.3M15.5 30c4-1 8.5-.6 12.5 1.3M15.5 35c3-.7 6.5-.6 9.5.5" stroke="#9aa9cf" stroke-width="1.5" stroke-linecap="round" fill="none"></path>
+                <path d="M36 26.3c4-1.9 8.5-2.3 12.5-1.3M36 31.3c4-1.9 8.5-2.3 12.5-1.3M39 36.5c3-1.1 6.5-1.2 9.5-.5" stroke="#9aa9cf" stroke-width="1.5" stroke-linecap="round" fill="none"></path>
+                <path d="M32 5.5v8M28.5 8.7h7" stroke="#ffce4a" stroke-width="2.6" stroke-linecap="round"></path>
+              </svg>
+            </span>
+            <span class="theme-name">Personajes Bíblicos</span>
+          </button>
+
+          <button type="button" class="theme-card" data-mode="mujeres">
+            <span class="check-badge" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M5 12.5l4.2 4.3L19 7" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            </span>
+            <span class="theme-icon" aria-hidden="true">
+              <svg viewBox="0 0 64 64">
+                <path d="M32 20C24 14 14 13 7 15v33c7-2 17-1 25 4 8-5 18-6 25-4V15c-7-2-17-1-25 5z" fill="#2f59c0"></path>
+                <path d="M32 22C25.5 17.5 17 16.5 11 18v27c6-1.5 14.5-.5 21 3.6V22z" fill="url(#pageGrad)"></path>
+                <path d="M32 22c6-4.5 14.5-5.5 21-4v27c-6.5-1.5-15-2.4-21 1.6V22z" fill="url(#pageGrad)"></path>
+                <rect x="31" y="21" width="2" height="27" rx="1" fill="#9fb3da"></rect>
+                <path d="M15.5 25c4-1 8.5-.6 12.5 1.3M15.5 30c4-1 8.5-.6 12.5 1.3M15.5 35c3-.7 6.5-.6 9.5.5" stroke="#9aa9cf" stroke-width="1.5" stroke-linecap="round" fill="none"></path>
+                <path d="M36 26.3c4-1.9 8.5-2.3 12.5-1.3M36 31.3c4-1.9 8.5-2.3 12.5-1.3M39 36.5c3-1.1 6.5-1.2 9.5-.5" stroke="#9aa9cf" stroke-width="1.5" stroke-linecap="round" fill="none"></path>
+                <path d="M32 5.5v8M28.5 8.7h7" stroke="#ffce4a" stroke-width="2.6" stroke-linecap="round"></path>
+              </svg>
+            </span>
+            <span class="theme-name">Mujeres de la Biblia</span>
+          </button>
+
+          <button type="button" class="theme-card" data-mode="historias">
+            <span class="check-badge" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M5 12.5l4.2 4.3L19 7" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            </span>
+            <span class="theme-icon" aria-hidden="true">
+              <svg viewBox="0 0 64 64">
+                <path d="M32 20C24 14 14 13 7 15v33c7-2 17-1 25 4 8-5 18-6 25-4V15c-7-2-17-1-25 5z" fill="#2f59c0"></path>
+                <path d="M32 22C25.5 17.5 17 16.5 11 18v27c6-1.5 14.5-.5 21 3.6V22z" fill="url(#pageGrad)"></path>
+                <path d="M32 22c6-4.5 14.5-5.5 21-4v27c-6.5-1.5-15-2.4-21 1.6V22z" fill="url(#pageGrad)"></path>
+                <rect x="31" y="21" width="2" height="27" rx="1" fill="#9fb3da"></rect>
+                <path d="M15.5 25c4-1 8.5-.6 12.5 1.3M15.5 30c4-1 8.5-.6 12.5 1.3M15.5 35c3-.7 6.5-.6 9.5.5" stroke="#9aa9cf" stroke-width="1.5" stroke-linecap="round" fill="none"></path>
+                <path d="M36 26.3c4-1.9 8.5-2.3 12.5-1.3M36 31.3c4-1.9 8.5-2.3 12.5-1.3M39 36.5c3-1.1 6.5-1.2 9.5-.5" stroke="#9aa9cf" stroke-width="1.5" stroke-linecap="round" fill="none"></path>
+                <path d="M32 5.5v8M28.5 8.7h7" stroke="#ffce4a" stroke-width="2.6" stroke-linecap="round"></path>
+              </svg>
+            </span>
+            <span class="theme-name">Historias</span>
+          </button>
+
+          <button type="button" class="theme-card" data-mode="jesus">
+            <span class="check-badge" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M5 12.5l4.2 4.3L19 7" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            </span>
+            <span class="theme-icon" aria-hidden="true">
+              <svg viewBox="0 0 64 64">
+                <path d="M32 20C24 14 14 13 7 15v33c7-2 17-1 25 4 8-5 18-6 25-4V15c-7-2-17-1-25 5z" fill="#2f59c0"></path>
+                <path d="M32 22C25.5 17.5 17 16.5 11 18v27c6-1.5 14.5-.5 21 3.6V22z" fill="url(#pageGrad)"></path>
+                <path d="M32 22c6-4.5 14.5-5.5 21-4v27c-6.5-1.5-15-2.4-21 1.6V22z" fill="url(#pageGrad)"></path>
+                <rect x="31" y="21" width="2" height="27" rx="1" fill="#9fb3da"></rect>
+                <path d="M15.5 25c4-1 8.5-.6 12.5 1.3M15.5 30c4-1 8.5-.6 12.5 1.3M15.5 35c3-.7 6.5-.6 9.5.5" stroke="#9aa9cf" stroke-width="1.5" stroke-linecap="round" fill="none"></path>
+                <path d="M36 26.3c4-1.9 8.5-2.3 12.5-1.3M36 31.3c4-1.9 8.5-2.3 12.5-1.3M39 36.5c3-1.1 6.5-1.2 9.5-.5" stroke="#9aa9cf" stroke-width="1.5" stroke-linecap="round" fill="none"></path>
+                <path d="M32 5.5v8M28.5 8.7h7" stroke="#ffce4a" stroke-width="2.6" stroke-linecap="round"></path>
+              </svg>
+            </span>
+            <span class="theme-name">Vida de Jesús</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- Configuración del juego -->
+      <section class="config-section" aria-label="Configuración del juego">
+        <h2 class="section-title">Configuración del juego</h2>
+
+        <div class="settings-card">
+          <div class="setting-row">
+            <span class="setting-icon icon-players" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <circle cx="9" cy="8.5" r="3.2"></circle>
+                <path d="M3.5 19c0-3 2.6-5 5.5-5s5.5 2 5.5 5"></path>
+                <circle cx="16.5" cy="8" r="2.6"></circle>
+                <path d="M15 14.2c3 .2 5.5 2.1 5.5 4.8"></path>
+              </svg>
+            </span>
+            <span class="setting-label">Jugadores</span>
+            <span class="setting-value">4</span>
+            <span class="chevron" aria-hidden="true">›</span>
+          </div>
+
+          <div class="setting-divider"></div>
+
+          <div class="setting-row">
+            <span class="setting-icon icon-impostor" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path class="hat" d="M12 4.4c-3 0-4.3 1.7-5 4.1-.2.7-.7 1-1.1 1h12.2c-.4 0-.9-.3-1.1-1-.7-2.4-2-4.1-5-4.1z"></path>
+                <rect class="hat" x="3.2" y="9" width="17.6" height="2.1" rx="1.05"></rect>
+                <path class="lens" d="M4.6 12.6h6.1v1.3a3.05 3.05 0 0 1-6.1 0z"></path>
+                <path class="lens" d="M13.3 12.6h6.1v1.3a3.05 3.05 0 0 1-6.1 0z"></path>
+                <path class="bridge" d="M10.7 13c.4-.5 2.2-.5 2.6 0"></path>
+              </svg>
+            </span>
+            <span class="setting-label">
+              Impostores
+              <span class="info-dot" aria-hidden="true">i</span>
+            </span>
+            <div class="stepper" role="group" aria-label="Cantidad de impostores">
+              <button type="button" class="step-btn step-minus" aria-label="Quitar impostor">
+                <svg viewBox="0 0 24 24"><path d="M6 12h12" stroke="#fff" stroke-width="2.4" stroke-linecap="round"></path></svg>
+              </button>
+              <span class="step-value">1</span>
+              <button type="button" class="step-btn step-plus" aria-label="Agregar impostor">
+                <svg viewBox="0 0 24 24"><path d="M12 6v12M6 12h12" stroke="#fff" stroke-width="2.4" stroke-linecap="round"></path></svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="setting-divider"></div>
+
+          <div class="setting-row">
+            <span class="setting-icon icon-hint" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <circle cx="10.5" cy="10.5" r="6"></circle>
+                <path d="M15 15l4.5 4.5" stroke-linecap="round"></path>
+              </svg>
+            </span>
+            <span class="setting-label">Pista para Impostores</span>
+            <button type="button" class="switch is-on" role="switch" aria-checked="true" aria-label="Pista para impostores">
+              <span class="switch-knob"></span>
+            </button>
+          </div>
+
+          <div class="setting-divider"></div>
+
+          <div class="setting-row">
+            <span class="setting-icon icon-rounds" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M6 3v18" stroke-linecap="round"></path>
+                <path d="M6 4.5c3-1.5 6 1.5 9 0 1.4-.7 2.6-.7 3.6-.2v8c-1 .5-2.2.5-3.6-.2-3-1.5-6 1.5-9 0z" class="flag-fill"></path>
+              </svg>
+            </span>
+            <span class="setting-label">Rondas</span>
+            <span class="setting-value">10 rondas</span>
+            <span class="chevron" aria-hidden="true">›</span>
+          </div>
+
+          <div class="setting-divider"></div>
+
+          <div class="setting-row">
+            <span class="setting-icon icon-time" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <circle cx="12" cy="13" r="7.5"></circle>
+                <path d="M12 9v4l2.6 1.8" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M9.5 3.5h5" stroke-linecap="round"></path>
+              </svg>
+            </span>
+            <span class="setting-label">Tiempo</span>
+            <span class="setting-value">3 minutos</span>
+            <span class="chevron" aria-hidden="true">›</span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div class="start-bar">
+      <button type="button" class="start-btn" id="startGameBtn">Iniciar Juego</button>
+    </div>
+  </div>
+
+  <script src="../js/config-game.js"></script>
+</body>
+</html>
